@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- COMMON TAGS -->
+<meta charset="utf-8">
+<title>Exportación de lana en Chile</title>
+<!-- Search Engine -->
+<meta name="description" content="En Chile se está rescatando el uso de lana de oveja merino, la cual se encontraba en decadencia, pese a sus múltiples beneficios">
+<meta name="image" content="https://estaticos.efe.com/efecom/recursos2/imagen.aspx?lVW2oAh2vjMaPOR0i7wGqtF9xbgRrCeAQ4TncnkXVSTX-P-2bAoG0sxzXPZPAk5l-P-2fU5UiAZ-P-2fmVXDOgjPIoBDtd-P-2fewQ-P-3d-P-3d">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="Restauración de lana merino en Chile">
+<meta itemprop="description" content="En Chile se está rescatando el uso de lana de oveja merino, la cual se encontraba en decadencia, pese a sus múltiples beneficios">
+<meta itemprop="image" content="https://estaticos.efe.com/efecom/recursos2/imagen.aspx?lVW2oAh2vjMaPOR0i7wGqtF9xbgRrCeAQ4TncnkXVSTX-P-2bAoG0sxzXPZPAk5l-P-2fU5UiAZ-P-2fmVXDOgjPIoBDtd-P-2fewQ-P-3d-P-3d">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="Restauración de lana merino en Chile">
+<meta name="og:description" content="En Chile se está rescatando el uso de lana de oveja merino, la cual se encontraba en decadencia, pese a sus múltiples beneficios">
+<meta name="og:type" content="website">
+    <!-- Fin de los metadatos -->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        figure {
+            padding: 0.5rem 1rem;
+        }
+        
+        figure figcaption {
+            margin: 0rem -0.5em -0.5em -0.5em;
+            padding-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <select onchange="if (this.value) window.location.href=this.value">
+            <option value="index.html">La lana en Chile historia</option>
+            <option value="page-1.html">Características de la lana</option>
+            <option value="page-2.html" selected>Exportación de lana al extranjero</option>
+        </select>
+    </nav>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">El trabajo de la lana en Chile</a></h1>
+        </header>
+        <section>
+            <h2>Exportación de lana al extranjero</h2>
+            <p>En 2016, Lana fue el 211er producto más exportado por Chile, de un total de 1224 categorías. Representó el 0,0% de las exportaciones a nivel nacional, siendo Magallanes la principal región exportadora, abarcando el 88,6% del total.</p>
+            <p><a href="page-1.html">Características de la lana</a>. Las exportaciones de Lana fueron de $ 8,56 millones, siendo China el principal destino de las exportaciones, alcanzando un 77,6 %, seguido de Uruguay y República Checa, con un 14,0 % y 3,0 % respectivamente. Por otra parte, las importaciones de Lana fueron de $ 5,59 mil, siendo Perú la principal fuente de las importaciones, alcanzando un 81,2 %, seguido de Ecuador con un 18,8 %.</p>
+            <figure>
+                <canvas id="uci"></canvas>
+                <figcaption>Fuente de Datos: Datachile</figcaption>
+            </figure>
+            <p>Existe una fuerte demanda de lana a nivel mundial, la que —según los especialistas— debiera mantenerse en el mediano plazo. Esto por la reducción de la oferta en los principales países exportadores; y por el encarecimiento del algodón y el petróleo a nivel mundial, insumos necesarios para creación de bienes sustitutos.</p>
+        </section>
+        <footer>
+            <hr>
+            <p>Valeria Parraguez
+                <time datetime="2020-05-06" class="derecha">Miércoles, 6 de mayo de 2020</time>
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script>
+        Chart.defaults.global.defaultFontFamily = "'Lucida Console', 'Monaco', 'monospace'";
+        new Chart(document.getElementById('uci').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ["01/04", "02/04", "03/04", "04/04", "05/04", "06/04", "07/04", "08/04", "09/04", "10/04", "11/04", "12/04", "13/04", "14/04", "15/04", "16/04", "17/04", "18/04", "19/04", "20/04", "21/04", "22/04", "23/04", "24/04", "25/04", "26/04", "27/04", "28/04", "29/04", "30/04"],
+                datasets: [{
+                    label: 'CHILE',
+                    borderColor: '#cc2f59',
+                    backgroundColor: '#cc2f59',
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [16, 18, 22, 27, 34, 37, 43, 48, 57, 65, 73, 80, 82, 92, 94, 105, 116, 126, 133, 139, 147, 160, 168, 174, 181, 189, 198, 207]
+                }, {
+                    label: 'ARGENTINA',
+                    borderColor: '#2b89f5',
+                    backgroundColor: '#2b89f5',
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [28, 36, 39, 43, 44, 48, 56, 63, 72, 82, 83, 90, 97, 102, 111, 115, 123, 129, 132, 136, 147, 152, 165, 176, 185, 192, 197, 207]
+                }, {
+                    label: 'ECUADOR',
+                    borderColor: '#6d2b65', // noten que este color coincide con el de h1{…} en el CSS
+                    backgroundColor: '#6d2b65', // esto para darle consistencia a los colores en uso
+                    borderWidth: 1,
+                    pointRadius: 2,
+                    lineTension: 0,
+                    data: [93, 120, 145, 172, 180, 191, 191, 242, 272, 297, 315, 333, 355, 369, 388, 403, 421, 456, 474, 507, 520, 537, 560, 576, 576, 576, 663, 871]
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'MUERTES POR COVID19 DURANTE ABRIL, 2020'
+                },
+                tooltips: {
+                    position: 'nearest',
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            minRotation: 90
+                        }
+                    }]
+                }
+            },
+
+        });
+    </script>
+    
+  
+       
+</body>
+
+</html>
